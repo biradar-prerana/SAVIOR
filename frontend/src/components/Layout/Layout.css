@@ -1,0 +1,113 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, rgba(22, 31, 50, 0.95), rgba(15, 23, 42, 0.95));
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--border);
+}
+
+.sidebar-header {
+  padding: 20px;
+  background: rgba(10, 17, 32, 0.6);
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #93c5fd;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-header p {
+  margin: 5px 0 0 0;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.nav-menu li {
+  margin: 0;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 15px 20px;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(148,163,184,0.12);
+}
+
+.nav-menu a.active {
+  background: var(--primary-gradient);
+  color: white;
+  border-left: 3px solid rgba(255,255,255,0.55);
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(10, 17, 32, 0.6);
+}
+
+.submenu li a {
+  padding: 10px 20px 10px 40px;
+  font-size: 14px;
+}
+
+.sidebar-footer {
+  padding: 20px;
+  background-color: rgba(10, 17, 32, 0.6);
+  border-top: 1px solid var(--border);
+}
+
+.sidebar-footer p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.logout-btn:hover {
+  filter: brightness(1.05);
+}
+
+.main-content {
+  margin-left: 250px;
+  flex: 1;
+  padding: 30px;
+  background:
+    radial-gradient(800px 400px at 20% 10%, rgba(102,126,234,0.15), transparent 60%),
+    radial-gradient(600px 350px at 90% 70%, rgba(118,75,162,0.12), transparent 60%),
+    linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 60%, #0b1020 100%);
+}
+

@@ -1,0 +1,197 @@
+.login-container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(1200px 600px at 10% 10%, rgba(102,126,234,0.25), transparent 70%),
+    radial-gradient(900px 500px at 90% 80%, rgba(118,75,162,0.25), transparent 70%),
+    linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0b1020 100%);
+}
+
+.login-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  width: 100%;
+  max-width: 1000px;
+  padding: 24px;
+}
+
+.login-hero {
+  position: relative;
+  background: linear-gradient(180deg, rgba(22, 31, 50, 0.9), rgba(15, 23, 42, 0.9));
+  border: 1px solid rgba(88, 115, 193, 0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  border-radius: 12px;
+  padding: 32px;
+  color: #cbd5e1;
+  overflow: hidden;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.brand h1 {
+  font-size: 28px;
+  color: #60a5fa;
+  letter-spacing: 1px;
+}
+.brand p {
+  color: #94a3b8;
+  font-size: 13px;
+}
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  color: #22d3ee;
+  background: rgba(3, 105, 161, 0.25);
+  border: 1px solid rgba(3, 105, 161, 0.45);
+  border-radius: 6px;
+}
+
+.hero-graphic {
+  position: relative;
+  height: 220px;
+  margin: 12px 0 24px;
+  background:
+    radial-gradient(500px 200px at 20% 30%, rgba(2,132,199,0.15), transparent 60%),
+    radial-gradient(400px 160px at 70% 60%, rgba(99,102,241,0.15), transparent 60%);
+  border: 1px dashed rgba(59,130,246,0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.radar {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.ring {
+  position: absolute;
+  border: 1px solid rgba(99,102,241,0.35);
+  border-radius: 50%;
+}
+.r1 { width: 40%; height: 40%; }
+.r2 { width: 65%; height: 65%; }
+.r3 { width: 85%; height: 85%; }
+.sweep {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(59,130,246,0.0), rgba(59,130,246,0.7), rgba(59,130,246,0.0));
+  transform-origin: left center;
+  animation: sweep 6s linear infinite;
+}
+@keyframes sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.nodes .node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #22d3ee;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(34,211,238,0.8);
+}
+.nodes .n1 { top: 18%; left: 22%; }
+.nodes .n2 { top: 65%; left: 30%; }
+.nodes .n3 { top: 40%; left: 70%; }
+.nodes .n4 { top: 72%; left: 78%; }
+
+.feature-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.feature-chips span {
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #9ca3af;
+  border: 1px solid rgba(148,163,184,0.35);
+  background: rgba(2,6,23,0.35);
+  border-radius: 999px;
+}
+.legal {
+  margin-top: 12px;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.login-card {
+  background: #0b1324;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(88,115,193,0.35);
+  width: 100%;
+  max-width: 420px;
+  color: #e5e7eb;
+}
+
+.login-card h2 {
+  text-align: left;
+  color: #93c5fd;
+  margin-bottom: 6px;
+}
+
+.login-card > p {
+  text-align: left;
+  color: #64748b;
+  margin-bottom: 24px;
+  font-size: 13px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(148,163,184,0.35);
+  background: rgba(2,6,23,0.35);
+  color: #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #2563eb, #22d3ee);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  filter: brightness(1.05);
+}
+
+.error-message {
+  background-color: rgba(239,68,68,0.12);
+  color: #fca5a5;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+

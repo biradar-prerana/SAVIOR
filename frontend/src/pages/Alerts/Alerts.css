@@ -1,0 +1,50 @@
+.alerts-page {
+  padding: 10px;
+}
+.page-header h1 {
+  margin: 0 0 20px 0;
+  color: #93c5fd;
+}
+.error-banner {
+  background-color: rgba(231,76,60,0.12);
+  color: #fca5a5;
+  padding: 10px 12px;
+  border: 1px solid rgba(231,76,60,0.35);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.loading {
+  color: #94a3b8;
+}
+.table-container {
+  background: var(--bg-panel);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--panel-shadow);
+  overflow: hidden;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.data-table thead {
+  background-color: rgba(2,6,23,0.6);
+}
+.data-table th, .data-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(148,163,184,0.2);
+  text-align: left;
+  color: #e5e7eb;
+}
+.primary-btn {
+  padding: 8px 12px;
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.primary-btn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}

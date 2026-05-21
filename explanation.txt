@@ -1,0 +1,131 @@
+SAVIOR Project Directory Structure and File Explanations
+
+PROJECT OVERVIEW
+SAVIOR is a comprehensive vulnerability scanning platform that helps organizations identify and fix security weaknesses in their web applications and networks. The project has two main parts: a backend (Django) that handles the scanning logic and data storage, and a frontend (React) that provides the user interface.
+
+BACKEND STRUCTURE
+
+backend/scanning/models.py
+This file defines the database models for storing scan targets, scans, and vulnerabilities. It's like a blueprint that tells the database how to organize all the security information collected during scans.
+
+backend/scanning/views.py
+This file contains the API endpoints that handle requests from the frontend. It manages creating scans, starting scans, and retrieving vulnerability results, acting as the communication bridge between the user interface and the scanning engine.
+
+backend/scanning/scan_engines.py
+This file contains different types of scanners (web, network, server) that perform the actual security checks. Each scanner knows how to look for specific types of vulnerabilities like SQL injection or cross-site scripting.
+
+backend/scanning/scanner_service.py
+This is the main scanning engine that coordinates all vulnerability detection methods. It runs multiple security checks in parallel to quickly find weaknesses in target websites and applications.
+
+backend/ai_risk_scoring/models.py
+This file defines models for calculating and storing risk scores. It helps organizations understand how dangerous each vulnerability is based on factors like severity and potential impact.
+
+backend/ai_risk_scoring/views.py
+This file handles risk assessment calculations and provides risk scores for vulnerabilities. It helps prioritize which security issues should be fixed first based on their potential damage.
+
+backend/reporting/models.py
+This file defines models for generating security reports. It stores report templates, schedules, and generated reports that help organizations track their security status over time.
+
+backend/reporting/views.py
+This file manages the creation and distribution of security reports. It generates PDF reports and handles automated report scheduling for compliance requirements.
+
+backend/alerts/models.py
+This file defines alert system models for notifying security teams about critical vulnerabilities. It stores alert rules and notification preferences.
+
+backend/alerts/views.py
+This file handles the alert system that sends notifications when critical vulnerabilities are found. It can send emails or other alerts to keep security teams informed.
+
+FRONTEND STRUCTURE
+
+frontend/src/pages/Dashboard/Dashboard.js
+This file creates the main dashboard interface that shows security statistics, recent scans, and vulnerability counts. It gives users a quick overview of their security status.
+
+frontend/src/pages/Dashboard/Dashboard.css
+This file contains styling for the dashboard, making it visually appealing with colors, layouts, and responsive design for different screen sizes.
+
+frontend/src/pages/Scanning/Scans.js
+This file manages the scans page where users can create new scan targets, start scans, and view scan results. It handles all the scanning operations from the user interface.
+
+frontend/src/pages/Scanning/ScanTargets.js
+This file displays the list of scan targets and allows users to manage their targets. Users can add, edit, or remove websites and applications they want to scan.
+
+frontend/src/pages/Scanning/Vulnerabilities.js
+This file shows all discovered vulnerabilities in a detailed list. Users can filter, search, and sort vulnerabilities to focus on the most critical security issues.
+
+frontend/src/components/VulnerabilityList/VulnerabilityList.js
+This component displays vulnerabilities in a table format with filtering options. It's used across multiple pages to consistently show vulnerability information.
+
+frontend/src/services/scanningService.js
+This file contains functions for communicating with the backend API. It handles all the network requests for creating scans, getting results, and managing targets.
+
+frontend/src/services/api.js
+This file sets up the main API connection with authentication and base URL configuration. It ensures all frontend requests are properly authenticated and routed to the backend.
+
+CONFIGURATION FILES
+
+backend/requirements.txt
+This file lists all Python packages needed to run the backend. It includes Django, database connectors, and security scanning libraries.
+
+frontend/package.json
+This file lists all JavaScript packages needed for the frontend. It includes React, routing libraries, chart components, and other UI dependencies.
+
+README.md
+This file contains project documentation explaining how to install, configure, and run the SAVIOR platform. It's the main guide for developers and users.
+
+CONNECTIVITY_REPORT.md
+This file documents the connection status between frontend and backend components. It verifies that all parts of the system are properly communicating.
+
+MONGODB_SETUP.md
+This file explains how to set up MongoDB database for storing scan results. It provides configuration details and best practices for database management.
+
+DEVELOPMENT FILES
+
+.vscode/tasks.json
+This file contains VS Code task definitions for easily starting the backend and frontend servers. It helps developers run the project with a single command.
+
+.gitignore
+This file tells Git which files and folders to ignore during version control. It prevents sensitive files and temporary files from being committed to the repository.
+
+DATABASE MODELS
+
+The project uses MongoDB for storing scan results and PostgreSQL for user management. This hybrid approach provides flexibility for vulnerability data while maintaining security for user information.
+
+SECURITY FEATURES
+
+Role-based access control ensures users can only see data they're authorized to view. Compliance officers can see all vulnerabilities across the organization, while regular users only see their own scans.
+
+API SECURITY
+
+All API endpoints require authentication and use Django's built-in security features. The system includes input validation and protection against common web attacks.
+
+SCANNING PROCESS
+
+When a user starts a scan, the system first checks if the target is accessible, then runs multiple vulnerability detection methods in parallel to find security weaknesses quickly and efficiently.
+
+REPORTING SYSTEM
+
+The platform automatically generates detailed security reports with vulnerability details, risk scores, and remediation recommendations. Reports can be scheduled for regular delivery to stakeholders.
+
+ALERT SYSTEM
+
+Critical vulnerabilities trigger immediate alerts to security teams. The system can send notifications via email or other channels to ensure rapid response to security threats.
+
+COMPLIANCE FEATURES
+
+SAVIOR helps organizations meet compliance requirements by mapping vulnerabilities to standards like GDPR, HIPAA, and PCI DSS. It generates audit-ready reports for regulatory purposes.
+
+MOBILE ACCESS
+
+The responsive design allows security teams to access the platform from mobile devices. Critical alerts and scan results are available anywhere, anytime.
+
+INTEGRATION CAPABILITIES
+
+The platform can integrate with existing security tools and DevOps pipelines. This allows organizations to incorporate vulnerability scanning into their existing workflows.
+
+PERFORMANCE OPTIMIZATIONS
+
+The scanning engine uses parallel processing and connection pooling to scan targets quickly. Results are cached to improve performance for repeated scans of the same targets.
+
+USER EXPERIENCE
+
+The interface is designed with user experience in mind, featuring intuitive navigation, clear visual indicators, and helpful tooltips to guide users through the security scanning process.

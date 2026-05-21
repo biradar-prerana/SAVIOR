@@ -1,0 +1,16 @@
+.reporting-page {
+  max-width: 1400px;
+}
+
+.reporting-page .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.reporting-page h1 {
+  margin: 0;
+  color: #93c5fd;
+}
+

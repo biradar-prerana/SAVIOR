@@ -1,0 +1,150 @@
+.scanning-page {
+  max-width: 1400px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  margin: 0;
+  color: #93c5fd;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: filter 0.2s;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.btn-small {
+  background: rgba(2,6,23,0.35);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.btn-small:hover {
+  filter: brightness(1.05);
+}
+
+.form-card {
+  background: var(--bg-panel);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: var(--panel-shadow);
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(148,163,184,0.35);
+  background: rgba(2,6,23,0.35);
+  color: #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.table-container {
+  background: var(--bg-panel);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: var(--panel-shadow);
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  background-color: rgba(2,6,23,0.6);
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.data-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(148,163,184,0.2);
+}
+
+.data-table tr:hover {
+  background-color: rgba(2,6,23,0.35);
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background-color: #f39c12;
+  color: white;
+}
+
+.status-running {
+  background-color: #3498db;
+  color: white;
+}
+
+.status-completed {
+  background-color: #27ae60;
+  color: white;
+}
+
+.status-failed {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.severity-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  text-transform: capitalize;
+}
+
